@@ -205,26 +205,6 @@ body {
     font-size: 2rem;
   }
 }
-.swiper__card_notes {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-.swiper__card_note {
-  border: 2px solid #262626;
-  border-radius: 28px;
-  background: #191919;
-  color: white;
-  display: flex;
-  gap: 0.5rem;
-  padding: 0.5rem 1rem;
-}
-.swiper__card_note > img {
-  width: 20px;
-  height: 20px;
-}
 .swiper__card_footer {
   display: grid;
   grid-template: auto/40% 10% 50%;

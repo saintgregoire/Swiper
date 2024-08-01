@@ -74,28 +74,6 @@
     }
   }
 
-  &__card_notes{
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
-
-  &__card_note{
-    @include border-grey($border-radius-lg);
-    background: $second-bg;
-    color: white;
-    display: flex;
-    gap: .5rem;
-    padding: .5rem 1rem;
-
-    & > img{
-      width: 20px;
-      height: 20px;
-    }
-  }
-
   &__card_footer{
     display: grid;
     grid-template: auto/40% 10% 50%;
