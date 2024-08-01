@@ -1,0 +1,67 @@
+//!Variables------------------------------------------------------------------------
+
+$main-bg: #141414;
+$second-bg: #191919;
+$btn-color: #703BF7;
+$white: white;
+$border-grey: #262626;
+$text-color: #999999;
+$arrows-color: #808080;
+
+$border-radius-sm: 10px;
+$border-radius-md: 12px;
+$border-radius-lg: 28px;
+$border-round: 50%;
+
+
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+$breakpoint-xl: 1440px;
+$breakpoint-xxl: 1920px;
+
+// !Mixin----------------------------------------------------------------------------
+
+@mixin vieport-md {
+	@media (min-width: $breakpoint-md) {
+		@content;
+	}
+}
+
+@mixin vieport-lg {
+	@media (min-width: $breakpoint-lg) {
+		@content;
+	}
+}
+
+@mixin vieport-xl {
+	@media (min-width: $breakpoint-xl) {
+		@content;
+	}
+}
+
+@mixin vieport-xxl {
+	@media (min-width: $breakpoint-xxl) {
+		@content;
+	}
+}
+
+@mixin title-text($font-size) {      
+	font-size: $font-size;
+	font-weight: 600;
+	color: $white;
+}
+
+@mixin border-grey($radius) {
+	border: 2px solid $border-grey;
+	border-radius: $radius;
+}
+
+@mixin flex-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+
+
