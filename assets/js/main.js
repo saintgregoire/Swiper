@@ -3,9 +3,9 @@ function mySwiper(
 	btnLeft, 
 	cards, 
 	clicksSmMd, 
-	clicksLg, 
-	clicksXl, 
-	clicksXxl ) {
+	clicksLg = clicksSmMd, 
+	clicksXl = clicksLg, 
+	clicksXxl = clicksXl ) {
 	let counter = 0;
 
 	if (btnRight && btnLeft && cards) {
@@ -60,11 +60,23 @@ document.addEventListener('DOMContentLoaded', ()=>{
   const btnRight = document.querySelector('.swiper__btn.right');
 	const btnLeft = document.querySelector('.swiper__btn.left');
 	const cards = document.querySelectorAll('.swiper__card');
-	let lengthMdLg = cards.length - 1;
-	let lengthXl = cards.length - 2;
-	let lengthXxl = cards.length - 3;
+
+	// ? By default, my swiper displays 1 card on screens from 375px to 1024px, 2 cards on screens from 1024px to 1440px, and 3 cards on screens above, so I had to specify the number of clicks for each screen size.
+	let clicksSmMd = cards.length - 1
+	let clicksMdLg = clicksSmMd;
+	let clicksXlXxl = cards.length - 2;
+	let clicksXxl = cards.length - 3;
+	// ? clicksSmMd is required since this is the initial number of clicks.
+	// ? The number of clicks for subsequent screen sizes inherits the number of clicks of the previous screen and does not need to be reassigned.
+	// *For example, if you always have only one card displayed, your function will look like:
+	// * let clicksSmMd = cards.length - 1;
+	// * mySwiper(btnRight, btnLeft, cards, clicksSmMd);
+	// * Because:
+	// * clicksLg = clicksSmMd, 
+	//* clicksXl = clicksLg, 
+	//* clicksXxl = clicksXl
 
 
-	mySwiper(btnRight, btnLeft, cards, lengthMdLg, lengthMdLg, lengthXl, lengthXxl);
+	mySwiper(btnRight, btnLeft, cards, clicksSmMd, clicksMdLg, clicksXlXxl, clicksXxl);
 
 });
