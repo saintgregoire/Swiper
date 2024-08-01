@@ -2,10 +2,10 @@ function mySwiper(
 	btnRight, 
 	btnLeft, 
 	cards, 
-	clicksSmMd = 5, 
-	clicksLg = clicksSmMd, 
-	clicksXl=clicksLg, 
-	clicksXxl=clicksXl ) {
+	clicksSmMd, 
+	clicksLg, 
+	clicksXl, 
+	clicksXxl ) {
 	let counter = 0;
 
 	if (btnRight && btnLeft && cards) {
